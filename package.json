@@ -1,0 +1,12 @@
+{
+  "name": "dionisio-theme",
+  "displayName": "Dionisio Theme",
+  "theme": "ui",
+  "version": "0.1.5",
+  "description": "Dionisio Dark Theme For Mailspring",
+  "license": "MIT",
+  "engines": {
+    "mailspring": "*"
+  },
+  "private": true
+}

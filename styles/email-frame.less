@@ -1,0 +1,100 @@
+@import 'ui-variables';
+
+.ignore-in-parent-frame {
+  
+  // ----- Font Families -----
+  @font-face {
+    font-family: 'Nylas-Pro';
+    font-style: normal;
+    font-weight: 200;
+    src: url('mailspring://custom-fonts/fonts/Custom-Thin.otf');
+  }
+
+  @font-face {
+    font-family: 'Nylas-Pro';
+    font-style: normal;
+    font-weight: 300;
+    src: url('mailspring://custom-fonts/fonts/Custom-Blond.otf');
+  }
+
+  @font-face {
+    font-family: 'Nylas-Pro';
+    font-style: normal;
+    font-weight: 400;
+    src: url('mailspring://custom-fonts/fonts/Custom-Normal.otf');
+  }
+
+  @font-face {
+    font-family: 'Nylas-Pro';
+    font-style: normal;
+    font-weight: 500;
+    src: url('mailspring://custom-fonts/fonts/Custom-Medium.otf');
+  }
+
+  @font-face {
+    font-family: 'Nylas-Pro';
+    font-style: normal;
+    font-weight: 600;
+    src: url('mailspring://custom-fonts/fonts/Custom-SemiBold.otf');
+  }
+
+  // Pro-SemiBold doesn't render emoji properly. Override the emjoi unicode
+  // block so that it uses the "Normal" weight even at font-weight:600.
+  @font-face {
+    font-family: 'Nylas-Pro';
+    font-style: normal;
+    font-weight: 600;
+    src: url('mailspring://custom-fonts/fonts/Custom-Normal.otf'), Helvetica, sans-serif;
+    unicode-range: U+1f300-1f5ff, U+1f600-1f64f, U+1f680-1f6ff, U+2600-26ff;
+  }
+
+  
+  body {
+    //Forces the text to be 15px, black and then invert the color, 
+    //changing all the text to white and images to negative.
+    font-size: 12px;
+    color: #000;
+    filter: invert(100%) hue-rotate(180deg);
+  }
+
+  html,
+  body {
+    //Aplies to the entire HTML.
+    font-size: 15px;
+    font-weight: bold;
+    -webkit-text-size-adjust: auto;
+    -webkit-nbsp-mode: space;
+    line-break: auto;
+    -webkit-line-break: after-white-space;
+  }
+
+  img {
+    //Inverts the color of the images to their original.
+    filter: invert(100%) hue-rotate(180deg);
+  }
+
+ #inbox-html-wrapper {
+    font-family:  'Nylas-Pro','Helvetica', 'Lucidia Grande', sans-serif;
+    font-size: 15px;
+  }
+
+  #inbox-html-wrapper.platform-win32 {
+    font-family:  'Nylas-Pro','Helvetica', 'Lucidia Grande', sans-serif;
+    font-size: 15px;
+  }
+
+  #inbox-plain-wrapper {
+    font-family: 'Nylas-Pro','Helvetica', 'Lucidia Grande', sans-serif;
+    font-size: 15px;
+    white-space: pre-line;
+  }
+
+  pre.nylas-plaintext {
+    //Replace the font from the e-mail to have more clear reading.
+    font-family:  'Nylas-Pro','Helvetica', 'Lucidia Grande', sans-serif;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    color: rgb(163, 162, 162);
+    font-size: 15px;
+  }
+}
