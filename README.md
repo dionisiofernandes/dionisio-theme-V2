@@ -2,4 +2,7 @@
 Based on the Pure Dark Mailspring Theme
 
 
-https://i.imgur.com/7btX3Ez.png
+
+
+
+![alt text](https://i.imgur.com/7btX3Ez.png)
